@@ -1,0 +1,12 @@
+# Core GUI Framework
+streamlit>=1.30.0
+
+# Image Processing & Background Removal
+rembg>=2.0.50
+pillow>=10.0.0
+onnxruntime>=1.15.0  # Diperlukan agar rembg berjalan ringan di CPU tanpa Torch
+
+# Opsional: Hanya jika Anda benar-benar akan mengaktifkan fitur pemrosesan VIDEO 
+# yang disebutkan di docstring run.py (saat ini kode videonya belum ada)
+# moviepy>=1.0.3
+# ffmpeg-python>=0.2.0
