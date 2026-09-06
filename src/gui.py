@@ -23,6 +23,30 @@ st.set_page_config(
     layout="wide",
 )
 
+# Sembunyikan / samarkan header Streamlit Cloud
+st.markdown(
+    """
+<style>
+header[data-testid="stHeader"] {
+    background: transparent !important;
+    visibility: hidden;
+    height: 0px !important;
+    min-height: 0 !important;
+}
+/* Cadangan: jika selector di atas tidak bekerja di versi Streamlit terbaru */
+[data-testid="stHeader"] {
+    visibility: hidden !important;
+    height: 0 !important;
+}
+/* Hilangkan juga ruang kosong yang tersisa */
+header + div {
+    margin-top: -2rem !important;
+}
+</style>
+""",
+    unsafe_allow_html=True,
+)
+
 # ---------- Theme & Modern UI CSS ----------
 logo_path = os.path.join("assets", "studiopic.png")
 if os.path.exists(logo_path):
