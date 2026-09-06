@@ -14,7 +14,7 @@ from pathlib import Path
 
 import streamlit as st
 
-from src.background_remover import process_image
+from background_remover import process_image
 
 # ---------- Page config ----------
 st.set_page_config(
